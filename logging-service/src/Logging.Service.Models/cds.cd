@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logging.Server.Models.StreamData.Api.StreamDataEventViewModel">
+    <Position X="2.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Api\StreamData\StreamDataEventViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Models.StreamData.Api.StreamDataAggregateViewModel">
+    <Position X="2.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Api\StreamData\StreamDataAggregateViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Models.StreamData.Api.StreamDataFilterResultViewModel">
+    <Position X="4.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAICAAIAAAAAAAA=</HashCode>
+      <FileName>Api\StreamData\StreamDataFilterResultViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Models.StreamData.Api.Schemas.StreamDataSchemaViewModel">
+    <Position X="9.75" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAgAAAA=</HashCode>
+      <FileName>Api\Schemas\StreamDataSchemaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Models.StreamData.Api.Schemas.StreamDataSchemaColumnViewModel">
+    <Position X="6.75" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAABAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Api\Schemas\StreamDataSchemaColumnViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

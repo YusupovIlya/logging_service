@@ -1,0 +1,75 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'Logging.Client.Example/**'
+      - 'ClickHouseBuffer/**'
+      - 'logging-service/**'
+    branches: [ master ]
+  pull_request:
+    paths:
+      - 'Logging.Client.Example/**'
+      - 'ClickHouseBuffer/**'
+      - 'logging-service/**'
+    branches: [ master ]
+
+jobs:
+  restore-dependencies:
+    runs-on: ubuntu-latest
+    name: Restore Dependencies
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies for Logging.Client.Microservice
+      run: dotnet restore ./Logging.Client.Example/Logging.Client.Example.csproj
+
+    - name: Restore dependencies for ClickHouseBuffer.Microservice
+      run: dotnet restore ./ClickHouseBuffer/src/Buffer.Service/Buffer.Service.csproj
+
+    - name: Restore dependencies for Logging.WebApi.Microservice
+      run: dotnet restore ./logging-service/src/Logging.Service.WebApi/Logging.Service.WebApi.csproj
+
+  build:
+    needs: restore-dependencies
+    runs-on: ubuntu-latest
+    name: Build Projects
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Build Logging.Client.Microservice
+      run: dotnet build ./Logging.Client.Example/Logging.Client.Example.csproj -c Release
+
+    - name: Build ClickHouseBuffer.Microservice
+      run: dotnet build ./ClickHouseBuffer/src/Buffer.Service/Buffer.Service.csproj -c Release
+
+    - name: Build Logging.WebApi.Microservice
+      run: dotnet build ./logging-service/src/Logging.Service.WebApi/Logging.Service.WebApi.csproj -c Release
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Run Tests
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Test ClickHouseBuffer.Microservice
+      run: dotnet test ./ClickHouseBuffer/src/ClickHouseBuffer.Tests/ClickHouseBuffer.Tests.csproj -c Release
+
+    - name: Test Logging.WebApi.Microservice
+      run: dotnet test ./logging-service/src/Logging.Service.Tests/Logging.Service.Tests.csproj -c Release

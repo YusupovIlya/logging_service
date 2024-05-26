@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logging.Server.Service.StreamData.Controllers.StreamDataController">
+    <Position X="9.75" Y="1.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AASAAAAEEACAgAABACABAAAUADAAAAAAIAAMAAAAAAA=</HashCode>
+      <FileName>Controllers\StreamDataController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Controllers.StreamDataSchemasController">
+    <Position X="6.75" Y="1.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEAAAAAAAAAAEAAEAAAAAAAAAAAAg=</HashCode>
+      <FileName>Controllers\StreamDataSchemasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.StreamDataRepositoryImpl" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAkAChAAIQAIAAgABAIAAAAAIABAAEABEABIA=</HashCode>
+      <FileName>Services\Implementation\StreamDataRepositoryImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.StreamDataSchemasRepository">
+    <Position X="18.25" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgABAAAAAAAAAIAgAAEAAAQEAABEAAAA=</HashCode>
+      <FileName>Services\Implementation\StreamDataSchemasRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.FileService" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAQCQAAAAAAAAAAABAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Services\Implementation\FileService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.FileServiceFactory">
+    <Position X="23" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Implementation\FileServiceFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.CsvFileService">
+    <Position X="24.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Implementation\CsvFileService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.BaseRepository">
+    <Position X="15.5" Y="1.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAA=</HashCode>
+      <FileName>Services\Implementation\BaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logging.Server.Service.StreamData.Services.Implementation.XlsxFileService">
+    <Position X="24.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Implementation\XlsxFileService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Logging.Server.Service.StreamData.Services.IStreamDataRepository">
+    <Position X="13.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAkAABAAAAAAAAAABAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Services\IStreamDataRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logging.Server.Service.StreamData.Services.IStreamDataSchemasRepository">
+    <Position X="15.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAEAAAA=</HashCode>
+      <FileName>Services\IStreamDataSchemasRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

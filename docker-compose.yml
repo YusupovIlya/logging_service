@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  clickhouse:
+    image: yandex/clickhouse-server
+    ports:
+      - "8123:8123"
+    environment:
+      - CLICKHOUSE_DB=logging_service
+      - CLICKHOUSE_USER=someuser
+      - CLICKHOUSE_PASSWORD=strongPasw
+      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1      
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  buffer-service:
+    build:
+      context: ./ClickHouseBuffer
+      dockerfile: Dockerfile
+    ports:
+      - "5146:8080"      
+    depends_on:
+      - clickhouse
+      - rabbitmq
+
+  client-example:
+    build:
+      context: ./Logging.Client.Example
+      dockerfile: Dockerfile
+    depends_on:
+        - buffer-service
+
+  backend-service:
+    build:
+      context: ./logging-service
+      dockerfile: Dockerfile
+    ports:
+      - "7087:8080"      
+    depends_on:
+      - buffer-service
+
+  frontend:
+    build:
+      context: ./logging-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend-service

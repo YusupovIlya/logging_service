@@ -1,0 +1,30 @@
+name: Frontend CI
+
+on:
+  push:
+    paths:
+      - 'logging-frontend/**'
+    branches: [ master ]
+  pull_request:
+    paths:
+      - 'logging-frontend/**'
+    branches: [ master ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - name: Install dependencies
+      run: npm install --legacy-peer-deps
+      working-directory: ./logging-frontend
+    - name: Build
+      env:
+        CI: false
+      run: npm run build
+      working-directory: ./logging-frontend

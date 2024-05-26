@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.ClickHouseBuffer", "src\Core.ClickHouseBuffer\Core.ClickHouseBuffer.csproj", "{10D23589-4769-4206-A505-CF6D2890C589}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6DD2F2FA-F448-4125-824D-A109D7E01119}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		.github\workflows\netcorelibrary.yml = .github\workflows\netcorelibrary.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C0E0B43-72B0-4336-A04E-B7F9086C9208}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buffer.Service", "src\Buffer.Service\Buffer.Service.csproj", "{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClickHouseBuffer.Tests", "src\ClickHouseBuffer.Tests\ClickHouseBuffer.Tests.csproj", "{9B0110CA-816A-448C-907C-9FA650435ACF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10D23589-4769-4206-A505-CF6D2890C589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D23589-4769-4206-A505-CF6D2890C589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D23589-4769-4206-A505-CF6D2890C589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D23589-4769-4206-A505-CF6D2890C589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0110CA-816A-448C-907C-9FA650435ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0110CA-816A-448C-907C-9FA650435ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0110CA-816A-448C-907C-9FA650435ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0110CA-816A-448C-907C-9FA650435ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A39A2AF-C94E-40A7-B0EF-672D5B2B3DD0} = {0C0E0B43-72B0-4336-A04E-B7F9086C9208}
+		{9B0110CA-816A-448C-907C-9FA650435ACF} = {0C0E0B43-72B0-4336-A04E-B7F9086C9208}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A2227B5-FAC1-48C1-B6A3-4C930AE708CC}
+	EndGlobalSection
+EndGlobal

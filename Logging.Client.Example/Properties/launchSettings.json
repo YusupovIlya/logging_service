@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Logging.Client.Example": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
